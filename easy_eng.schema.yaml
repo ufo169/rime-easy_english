@@ -47,8 +47,8 @@ engine:
   translators:
     - table_translator
     - punct_translator
-    - lua_translator@*lunar
-    - lua_translator@*en_custom
+#    - lua_translator@*lunar
+    - lua_translator@en_custom
     - lua_translator@engword_autocaps_translator
   filters:
     - lua_filter@engword_autocaps_filter
