@@ -75,7 +75,7 @@ key_binder:
     - { accept: "Control+Control_L", select: .next, when: always}  #切换方案
 
 punctuator:
-  import_preset: engsymbols
+  import_preset: mysymbols
   
 recognizer:
   import_preset: default
