@@ -1,0 +1,89 @@
+﻿# Rime schema
+# encoding: utf-8
+schema:
+  schema_id: easy_en
+  name: Easy English
+  version: "0.9.1"
+  author:
+    - Patrick <ipatrickmac@gmail.com>
+    - BlindingDark <blindingdark@outlook.com>
+  description:
+    Easy English
+
+easy_en:
+  split_sentence: true
+  use_wordninja_rs_lua_module: false
+  wordninja_rs_lua_module_path: "/usr/lib/lua/5.4/wordninja.so"
+  use_wordninja_rs: false
+  wordninja_rs_path: "/usr/bin/wordninja"
+  use_wordninja_py: false
+  use_wordninja_lua: true
+
+switches:
+  - name: ascii_mode
+    states: [ ASCII-OFF, ASCII-ON ]
+    reset: 0
+  - name: ascii_punct
+    states: [ 。，, ．， ]
+    reset: 1
+
+engine:
+  processors:
+#    - lua_processor@engword_append_space_processor
+    - ascii_composer
+    - key_binder
+    - speller
+    - recognizer
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - matcher
+    - ascii_segmentor
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - table_translator
+    - punct_translator
+    - lua_translator@*lunar
+    - lua_translator@*en_custom
+    - lua_translator@engword_autocaps_translator
+  filters:
+    - lua_filter@engword_autocaps_filter
+    - uniquifier
+#    - lua_filter@easy_en_enhance_filter
+
+speller:
+  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA/`
+  delimiter: " '"
+  algebra:
+
+
+translator:
+  dictionary: easy_eng
+  db_class: plain_userdb
+  spelling_hints: 9
+  comment_format:
+    - xform/^.+$//
+
+key_binder:
+  import_preset: default
+  bindings:
+#    - { accept: "Shift+Shift_R", select: .next, when: always}     #切换方案
+    - { accept: "Control+Control_L", select: .next, when: always}  #切换方案
+
+punctuator:
+  import_preset: engsymbols
+  
+recognizer:
+  import_preset: default
+  patterns:
+    uppercase: ''
+    punct: '^/([0-9]0?|[A-Za-z]+)$'
+
+menu:
+  page_size: 8
+style:
+  horizontal: false
