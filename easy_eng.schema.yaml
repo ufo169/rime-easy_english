@@ -1,7 +1,7 @@
 ﻿# Rime schema
 # encoding: utf-8
 schema:
-  schema_id: easy_en
+  schema_id: easy_eng
   name: Easy English
   version: "0.9.1"
   author:
