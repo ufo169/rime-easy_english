@@ -6,7 +6,7 @@
    engword_autocaps_filter = engword_autocaps.filter  
    engword_autocaps_translator = engword_autocaps.translator    
   
-① default.custom.yaml或sharedsupport/default.yaml    
+① default.custom.yaml 或 sharedsupport/default.yaml    
    schema_list/+:    
      - schema: easy_eng    
  
@@ -24,9 +24,9 @@
 已配置：左Ctrl键 快速切换方案，可以根据个人习惯自行修改  
 
 精准英文造词：  
-输入末尾必须是"`"，输入内容就会保存，显示"✅"；再次输入会删除，显示"❎"  
-保存位置为: en_dicts/en_custom.dict.yaml  
-例子: 输入vnext`后, vnext会自动保存到en_custom.dict.yaml 重复操作,会删除  
+输入末尾必须是"`"，输入内容就会保存，显示"✅"；再次输入会删除，显示"❎"   
+保存位置为: en_dicts/en_custom.dict.yaml   
+例子: 输入vnext`后, vnext会自动保存到en_custom.dict.yaml 重复操作,会删除   
 *注意：由于是保存到dict文件，需要重新部署后，下次输入才生效。  
 
 特别说明，iOS端的仓输入法，由于保存在键盘文件，所以需要以下操作：  
