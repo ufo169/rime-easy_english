@@ -1,15 +1,15 @@
 安装说明：   
 ① rime.lua添加    
-   en_custom = require("en_custom")   
-   
-   engword_autocaps = require("word_autocaps")  
-   engword_autocaps_filter = engword_autocaps.filter  
-   engword_autocaps_translator = engword_autocaps.translator    
-  
+　　　en_custom = require("en_custom")   
+
+　　　engword_autocaps = require("word_autocaps")  
+　　　engword_autocaps_filter = engword_autocaps.filter  
+　　　engword_autocaps_translator = engword_autocaps.translator    
+
 ① default.custom.yaml 或 sharedsupport/default.yaml    
-   schema_list/+:    
-     - schema: easy_eng    
- 
+　　　schema_list/+:    
+　　　　- schema: easy_eng    
+
 方案说明：  
 参考: BlindingDark/rime-easy-en  
 和shewer/rime-easy-en（改进适用最新的rime.dll）  
