@@ -25,7 +25,7 @@
 
 精准英文造词：  
 输入末尾必须是"`"，输入内容就会保存，显示"✅"；再次输入会删除，显示"❎"                   
-保存位置: en_dicts/en_custom.dict.yaml                                                   
+保存位置: en_dicts/en_custom.dict.yaml                                                      
 例子: 输入vnext`后, vnext会自动保存到en_custom.dict.yaml 重复操作,会删除             
 *注意：由于是保存到dict文件，需要重新部署后，下次输入才生效。  
 
