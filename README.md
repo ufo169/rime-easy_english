@@ -11,8 +11,8 @@
 　　　- schema: easy_eng    
 
 方案说明：  
-参考: BlindingDark/rime-easy-en  
-　和 shewer/rime-easy-en（改进适用最新的rime.dll）  
+参考: [BlindingDark/rime-easy-en](https://github.com/BlindingDark/rime-easy-en)  
+　和 [shewer/rime-easy-en](https://github.com/shewer/rime-easy-en)（改进适用最新的rime.dll）  
 原先使用大神的方案，可以实现自动空格和连续输入自动分词功能，而个人词典功能的缺失，  
 无法记忆词频和个人用词习惯。  
 
