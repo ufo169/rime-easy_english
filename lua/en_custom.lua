@@ -34,11 +34,11 @@ return function (input,seg)
    file = io.open(dict_dir, "w+")
    file:write(content)
    file:close()
-   yield(Candidate("en_custom",seg.start,seg._end,inp," 词已删 再输`可重添"))
+   yield(Candidate("en_custom",seg.start,seg._end,inp,"✅"))
   else
    local file = io.open(dict_dir,"a")
    file:write("\n"..unconfirm):close()
-   yield(Candidate("en_custom",seg.start,seg._end,inp," 已保存为用户词"))
+   yield(Candidate("en_custom",seg.start,seg._end,inp,"❎"))
   end
  end
 end
