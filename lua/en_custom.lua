@@ -24,7 +24,7 @@ local function user_dict_exists_(str,dir) -- 输入字符串和文件路径，�
 end
 return function (input,seg)
  if(input:sub(-1)=="`" and input~="`")then -- 输入末尾必须是`，并且排除只包含`的情况。
-  local inp = " " .. input:sub(1,-2):gsub("|"," ")  -- -3对应两个末尾符号,-2对应一个
+  local inp = input:sub(1,-2):gsub("|"," ")  -- -3对应两个末尾符号,-2对应一个
   local unconfirm = inp.."\t"..inp:gsub("[^%a]+",""):lower().."\t100000"
   if(user_dict_exists_(unconfirm,dict_dir))then
    local file = io.open(dict_dir, "r+")
