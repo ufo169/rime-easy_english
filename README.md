@@ -1,3 +1,4 @@
+2023-7-5 更新：  
 安装说明：   
 ①rime.lua添加    
 　　local easy_en = require("easy_en")  
@@ -23,7 +24,7 @@
 无法记忆词频和个人用词习惯。  
 
 改进，使用easy-en的分词功能打句子实现连续输入功能，用[boomker](https://github.com/boomker)  
-　　word_append_space.lua实现自动添加空格，半角符号顶屏。恢复个人词典功能，
+　　word_append_space.lua实现自动添加空格，[,.?!:]半角符号顶屏自动添加空格。恢复个人词典功能，
 　　可以记忆单词词频和个人用词习惯（记忆不了lua处理后的句子）。  
 
 句首大写输入方法： (Shift+首字母)   
