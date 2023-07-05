@@ -23,7 +23,7 @@
 参考大神的方案，可以实现自动空格和连续输入自动分词功能，而个人词典功能的缺失，  
 无法记忆词频和个人用词习惯。  
 
-改进，使用easy-en的分词功能打句子实现连续输入功能，用[boomker](https://github.com/boomker)  
+改进，使用easy-en的分词功能打句子实现连续输入功能，用[boomker](https://github.com/boomker)的  
 　　word_append_space.lua实现自动添加空格，[,.?!:]半角符号顶屏自动添加空格。恢复个人词典功能，
 　　可以记忆单词词频和个人用词习惯（记忆不了lua处理后的句子）。  
 
