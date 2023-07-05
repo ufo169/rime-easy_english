@@ -1,23 +1,31 @@
 安装说明：   
 ①rime.lua添加    
+　　local easy_en = require("easy_en")  
+　　easy_en_enhance_filter = easy_en.enhance_filter  
+　　
 　　en_custom = require("en_custom")   
+
+　　engword_append_space = require("word_append_space")  
+　　engword_append_space_processor = engword_append_space.processor  
 
 　　engword_autocaps = require("word_autocaps")  
 　　engword_autocaps_filter = engword_autocaps.filter  
 　　engword_autocaps_translator = engword_autocaps.translator    
 
-①default.custom.yaml 或 sharedsupport/default.yaml    
+②default.custom.yaml 或 sharedsupport/default.yaml    
 　　schema_list/+:    
 　　　- schema: easy_eng    
 
 方案说明：  
 参考: [BlindingDark/rime-easy-en](https://github.com/BlindingDark/rime-easy-en)  
 　和 [shewer/rime-easy-en](https://github.com/shewer/rime-easy-en)（改进适用最新的rime.dll）  
-原先使用大神的方案，可以实现自动空格和连续输入自动分词功能，而个人词典功能的缺失，  
+参考大神的方案，可以实现自动空格和连续输入自动分词功能，而个人词典功能的缺失，  
 无法记忆词频和个人用词习惯。  
 
-改进，首位编码引入空格，输入时自带空格，连续输入时自带空格分词功能，半角符号顶屏。  
-(大部分分词精准) ，恢复个人词典功能，记忆词频和个人用词习惯。  
+改进，使用easy-en的分词功能打句子实现连续输入功能，用[boomker](https://github.com/boomker)  
+　　word_append_space.lua实现自动添加空格，半角符号顶屏。恢复个人词典功能，
+　　可以记忆单词词频和个人用词习惯（记忆不了lua处理后的句子）。  
+
 句首大写输入方法： (Shift+首字母)   
 输入的内容大写前2个字符，自动转小写词条为全词大写  
 大写第一个字符，自动转写小写词条为首字母大写  

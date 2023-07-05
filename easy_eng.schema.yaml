@@ -29,7 +29,7 @@ switches:
 
 engine:
   processors:
-#    - lua_processor@engword_append_space_processor
+    - lua_processor@engword_append_space_processor
     - ascii_composer
     - key_binder
     - speller
@@ -53,7 +53,7 @@ engine:
   filters:
     - lua_filter@engword_autocaps_filter
     - uniquifier
-#    - lua_filter@easy_en_enhance_filter
+    - lua_filter@easy_en_enhance_filter
 
 speller:
   alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA/`
