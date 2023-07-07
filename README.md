@@ -3,7 +3,7 @@
 ①rime.lua添加    
 　　local easy_en = require("easy_en")  
 　　easy_en_enhance_filter = easy_en.enhance_filter  
-　　
+
 　　en_custom = require("en_custom")   
 
 　　engword_append_space = require("word_append_space")  
@@ -43,4 +43,4 @@
 　①精准造词  
 　②点击文件编辑下的，使用键盘文件覆盖应用文件  
 　③重新部署  
-另外可以保存到iCloud目录
+另外可以保存到iCloud目录，或许没那么麻烦
