@@ -69,13 +69,13 @@ local function enhance_filter(input, env)
             lower_sentence = string.lower(sentence)
 
             if (not (lower_sentence == sentence)) then
-               yield(Candidate("sentence", cand.start, cand._end, lower_sentence .. " ", "💡"))
+               yield(Candidate("sentence", cand.start, cand._end, lower_sentence .. "", "💡"))
             end
 
-            yield(Candidate("sentence", cand.start, cand._end, sentence .. " ", "💡"))
+            yield(Candidate("sentence", cand.start, cand._end, sentence .. "", "💡"))
          end
       else
-         yield(Candidate("word", cand.start, cand._end, cand.text .. " ", cand.comment))
+         yield(cand)
       end
    end
 end
